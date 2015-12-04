@@ -49,8 +49,8 @@
              :ring-handler cljs-editor.server/http-handler}
   
   :profiles {:dev {:source-paths ["env/dev/clj"]
-                   :dependencies [[figwheel "0.5.0-2"]
-                                  [figwheel-sidecar "0.5.0-2"]
+                   :dependencies [[figwheel "0.5.0-2" :exclusions [org.clojure/tools.reader org.clojure/tools.analyzer]]
+                                  [figwheel-sidecar "0.5.0-2" :exclusions [org.clojure/tools.reader org.clojure/tools.analyzer]]
                                   [com.cemerick/piggieback "0.2.1" :exclusions [org.clojure/clojurescript]]
                                   [weasel "0.7.0" :exclusions [org.clojure/clojurescript]]]
                    :repl-options {:init-ns cljs-editor.server
