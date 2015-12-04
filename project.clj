@@ -5,7 +5,6 @@
             :url "http://www.eclipse.org/legal/epl-v10.html"}
 
   :source-paths ["src/clj" "src/cljc"]
-
   :test-paths ["test/clj"]
 
   :dependencies [; for backend
@@ -42,7 +41,7 @@
                                         :optimizations :none
                                         :pretty-print  true}}}}
 
-  :clean-targets ^{:protect false} ["resources/public/js/out" "target"]
+  :clean-targets ^{:protect false} ["resources/public/js/app.js" "resources/public/js/out" "target"]
   
   :figwheel {:http-server-root "public"
              :server-port 3449
