@@ -51,8 +51,8 @@
   :profiles {:dev {:source-paths ["env/dev/clj"]
                    :dependencies [[figwheel "0.5.0-2"]
                                   [figwheel-sidecar "0.5.0-2"]
-                                  [com.cemerick/piggieback "0.1.5"]
-                                  [weasel "0.6.0"]]
+                                  [com.cemerick/piggieback "0.2.1" :exclusions [org.clojure/clojurescript]]
+                                  [weasel "0.7.0" :exclusions [org.clojure/clojurescript]]]
                    :repl-options {:init-ns cljs-editor.server
                                   :nrepl-middleware [cemerick.piggieback/wrap-cljs-repl]}
                    :plugins [[lein-figwheel "0.5.0-2" :exclusions [org.clojure/clojure org.clojure/tools.reader]]]
